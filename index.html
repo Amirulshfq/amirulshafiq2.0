@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        body {
+            font-family: 'Georgia', Times New Roman, Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-size: 11;
+        }
+
+        header {
+            background-color: rgb(48, 62, 76);
+            color: #f1f1f3;
+            padding: 1em;
+            text-align: center;
+            position: relative;
+            font-family: 'Georgia', Times New Roman, Times, serif; 
+            font-size: 12;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Add this line to center the content horizontally */
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        h1 {
+            text-align: left;
+            flex: 1;
+            margin: 0; /* Add this line to remove default margin */
+        }
+        
+
+        main {
+            display: flex;
+            flex: 1;
+        }
+
+        nav {
+            background-color: #f1f1f3; /* Soft Grey color */
+            color: #fff;
+            padding: 0.5em;
+            width: 20%; /* Adjust the width as needed */
+            display: flex;
+            flex-direction: column;
+            position: absolute; /* Add this line */
+            top: 60px; /* Adjust this value based on your header height */
+            left: 0; /* Add this line */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000000;
+            display: block;
+            padding: 5px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav a.active {
+            background-color: #303E4C; /* Steel Blue color */
+            color: #fff;
+        }
+
+        section {
+            padding: 20px;
+            flex: 1;
+            background-color: #f1f1f3; /* Soft Grey color */
+            display: flex;
+            flex-direction: column; /* This ensures child elements are aligned vertically */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+        }
+
+        footer {
+            background-color: #303E4C; /* Steel Blue color for footer */
+            color: #F1F1F3; /* Soft Grey color for footer text */
+            padding: 1em;
+            text-align: center;
+            font-family: 'Georgia', Times New Roman, Times, serif;
+            font-size: 11;
+            font-style: italic;
+        }
+
+        img.openbtn {
+            width: 150px; /* Set your desired width */
+            height: 150px; /* Maintain aspect ratio */
+            cursor: pointer; /* Add cursor pointer */
+            background-color: transparent; /* Set background color to transparent */
+            border: 2px solid #333; /* Set border color and width */
+            box-shadow: 5px 5px 10px #888; /* Set box shadow (horizontal offset, vertical offset, blur radius, color) */
+        }
+
+        /* Sidebar styling */
+        #mySidebar {
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #f1f1f3; /* Soft Grey color */
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        #mySidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #000000;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #mySidebar a:hover {
+            color: #303E4C; /* Steel Blue color */
+        }
+
+        #mySidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+            margin-left: 20%; /* Add this line */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Sidebar Icon in the Header -->
+    <img src="picture/Logo.png" alt="Amirul logo" class="openbtn" onclick="openNav()">
+    <h1 style="text-align: center;">Experience & Expertise: Muhamad Amirul Shafiq's E-resume</h1>
+</header>
+
+<main id="main">
+    <!-- Sidebar -->
+    <div id="mySidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="personalinformation.html"><strong>Personal Information</strong></a>
+        <a href="education.html"><strong>Education</strong></a>
+        <a href="skills.html"><strong>Skills</strong></a>
+        <a href="experience.html"><strong>Experience</strong></a>
+        <a href="contact.html"><strong>Contact</strong></a>
+    </div>
+    
+    <section>
+        <!-- Image -->
+        <img src="picture/Formal picture.jpg" alt="My Formal picture" 
+             style="width: 250px; height: 250px; border: 2px solid #333; box-shadow: 5px 5px 10px #888;">
+
+        <h2 style="font-size: 12;">Title: E-Resume Website</h2>
+        <p style="font-size: 11; font-style: italic;">📚<strong>Name:</strong> Muhamad Amirul Shafiq Bin Zulkanain</p>
+        <p style="font-size: 11; font-style: italic;">📚<strong>Student Id:</strong> 2022602106</p>
+        <p style="font-size: 11; font-style: italic;">📚<strong>Group:</strong> Elek A</p>
+        <p style="font-size: 11; font-style: italic;">📚<strong>Course Code:</strong> IMS456</p>
+        <p style="font-size: 11; font-style: italic;">📚<strong>Course Name:</strong> Basic Web Design And Content Management</p>
+        <p style="font-size: 11; font-style: italic;">📚<strong>Program Code:</strong> IM244ST1</p>
+        <p style="font-size: 11; font-style: italic;">📚<strong>Faculty:</strong> College of Computing, Informatic and mathematics</p>
+        <p style="font-size: 11; font-style: italic;">📚<strong>Lecterur Name:</strong> Madam Marlia Binti Idrus</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; All content, including but not limited to text, images, graphics, and multimedia elements, on this 
+        Amirulshfq.my is the property of Muhamad Amirul Shafiq Bin Zulkanain unless otherwise stated. 
+        The content is protected by copyright laws and international treaties.</p>
+    <p>&copy; Amirulshfq.my 2023. All rights reserved.</p>
+</footer>
+
+<script>
+    // Functions to open and close the sidebar
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+
+</body>
+</html>
+
